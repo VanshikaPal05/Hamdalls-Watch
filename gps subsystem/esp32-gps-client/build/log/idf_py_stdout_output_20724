@@ -1,0 +1,336 @@
+Command: C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe C:\esp\v5.5.5\esp-idf\tools/idf_monitor.py -p COM13 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32p4 --revision 100 --decode-panic backtrace C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\heimdall_gps_client.elf C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe' 'C:\esp\v5.5.5\esp-idf\tools\idf.py' '-p' 'COM13'
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x1 (POWERON),boot:0x20f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (25) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Oct  6 2026 02:00:38[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v1.3[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (32) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (36) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c9cch (313804) map[0m
+[0;32mI (141) esp_image: segment 1: paddr=0005c9f4 vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (142) esp_image: segment 2: paddr=0005ca50 vaddr=4ff00000 size=035c8h ( 13768) load[0m
+[0;32mI (148) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91dfch (597500) map[0m
+[0;32mI (252) esp_image: segment 4: paddr=000f1e24 vaddr=4ff035c8 size=0df34h ( 57140) load[0m
+[0;32mI (265) esp_image: segment 5: paddr=000ffd60 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (273) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (273) boot: Disabling RNG early entropy source...[0m
+[0;32mI (284) cpu_start: Multicore app[0m
+[0;32mI (295) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (295) cpu_start: Pro cpu start user code[0m
+[0;32mI (295) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (297) app_init: Application information:[0m
+[0;32mI (301) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (306) app_init: App version:      1[0m
+[0;32mI (309) app_init: Compile time:     Oct  6 2026 02:00:34[0m
+[0;32mI (314) app_init: ELF file SHA256:  8ff92cdaa...[0m
+[0;32mI (318) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (322) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (326) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (330) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (334) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (340) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (346) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (351) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (357) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (362) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (368) spi_flash: detected chip: gd[0m
+[0;32mI (370) spi_flash: flash io: dio[0m
+[0;33mW (373) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (385) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (390) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (398) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (402) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (413) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (418) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (425) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (425) main_task: Started on CPU0[0m
+[0;32mI (435) main_task: Calling app_main()[0m
+[0;32mI (455) HEIMDALL_MAIN: Connecting to Wi-Fi...[0m
+[0;32mI (455) example_connect: Start example_connect.[0m
+[0;32mI (455) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (455) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (455) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1985) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1985) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1985) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2025) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2025) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2125) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2125) transport: set_transport_state: 1[0m
+[0;32mI (2125) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2225) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2225) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2225) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2235) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2235) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2235) transport: EVENT: 12[0m
+[0;32mI (2235) transport: Identified slave [esp32c6][0m
+[0;32mI (2235) transport: EVENT: 11[0m
+[0;32mI (2245) transport: capabilities: 0xd[0m
+[0;32mI (2245) transport: Features supported are:[0m
+[0;32mI (2245) transport: 	 * WLAN[0m
+[0;32mI (2255) transport: 	   - HCI over SDIO[0m
+[0;32mI (2255) transport: 	   - BLE only[0m
+[0;32mI (2255) transport: EVENT: 13[0m
+[0;33mW (2265) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2275) transport: ESP board type is : 13 [0m
+
+[0;32mI (2275) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2285) H_API: Transport active[0m
+[0;32mI (2285) transport: Slave chip Id[12][0m
+[0;32mI (2285) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2295) transport: transport_delayed_init[0m
+[0;32mI (2295) esp_cli: Registering command: crash[0m
+[0;32mI (2305) esp_cli: Registering command: reboot[0m
+[0;32mI (2305) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2305) esp_cli: Registering command: task-dump[0m
+[0;32mI (2315) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2315) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2325) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2325) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2335) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2335) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2335) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2345) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2425) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2635) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2655) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2665) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2675) example_connect: Waiting for IP(s)[0m
+[0;32mI (6585) RPC_WRAP: ESP Event: Station mode: Connected[0m
+[0;32mI (6585) esp_wifi_remote: esp_wifi_internal_reg_rxcb: sta: 0x40057b0e[0m
+[0;32mI (7605) esp_netif_handlers: example_netif_sta ip: 192.168.204.52, mask: 255.255.255.0, gw: 192.168.204.253[0m
+[0;32mI (7605) example_connect: Got IPv4 event: Interface "example_netif_sta" address: 192.168.204.52[0m
+[0;32mI (8455) example_connect: Got IPv6 event: Interface "example_netif_sta" address: fe80:0000:0000:0000:fe01:2cff:fef9:d240, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (8455) example_common: Connected to example_netif_sta[0m
+[0;32mI (8455) example_common: - IPv4 address: 192.168.204.52,[0m
+[0;32mI (8465) example_common: - IPv6 address: fe80:0000:0000:0000:fe01:2cff:fef9:d240, type: ESP_IP6_ADDR_IS_LINK_LOCAL[0m
+[0;32mI (8475) HEIMDALL_MAIN: Wi-Fi connected[0m
+[0;32mI (8765) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (11455) example_connect: Got IPv6 event: Interface "example_netif_sta" address: 2409:40c4:10b4:d03a:fe01:2cff:fef9:d240, type: ESP_IP6_ADDR_IS_GLOBAL[0m
+[0;32mI (15315) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (21255) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (27195) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (33135) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (39275) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (45215) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (51155) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (57095) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (63445) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (69385) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (75325) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (81265) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (87605) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (93545) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (99485) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (105425) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (111775) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (117715) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (123655) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (129595) esp-x509-crt-bundle: Certificate validated[0m
+
+===== HEIMDALL GPS =====
+Latitude : 22.730213
+Longitude: 75.873213
+Accuracy : 5.4 m
+Altitude : 511.5 m
+Speed    : 0.00 m/s
+========================
+
+[0;32mI (136145) esp-x509-crt-bundle: Certificate validated[0m

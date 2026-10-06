@@ -1,0 +1,122 @@
+Command: C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe C:\esp\v5.5.5\esp-idf\tools/idf_monitor.py -p COM13 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32p4 --revision 100 --decode-panic backtrace C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\heimdall_gps_client.elf C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe' 'C:\esp\v5.5.5\esp-idf\tools\idf.py' '-p' 'COM13'
+--- WARNING: GDB cannot open serial ports accessed as COMx
+--- NOTE: Using \\.\COM13 instead...
+--- esp-idf-monitor 1.10.0 on \\.\COM13 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40024530: app_main at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+--- 0x4ff05e29: _esp_error_check_failed at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+--- Stack dump detected
+--- 0x4ff05e80: panic_abort at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+--- 0x4ff05e32: esp_vApplicationTickHook at C:/esp/v5.5.5/esp-idf/components/esp_system/freertos_hooks.c:31
+--- 0x4ff00003: _vector_table at ??:?
+--- Backtrace:
+
+
+--- 0x4ff0320a: cpu_utility_ll_reset_cpu at C:/esp/v5.5.5/esp-idf/components/hal/esp32p4/include/hal/cpu_utility_ll.h:25(inlined by) esp_cpu_reset at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:49
+--- 0x4ff03352: esp_cpu_wait_for_intr at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:57
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40024530: app_main at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+--- 0x4ff05e29: _esp_error_check_failed at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+--- Stack dump detected
+--- 0x4ff05e80: panic_abort at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+--- 0x4ff05e32: esp_vApplicationTickHook at C:/esp/v5.5.5/esp-idf/components/esp_system/freertos_hooks.c:31
+--- 0x4ff00003: _vector_table at ??:?
+--- Backtrace:
+
+
+--- 0x4ff0320a: cpu_utility_ll_reset_cpu at C:/esp/v5.5.5/esp-idf/components/hal/esp32p4/include/hal/cpu_utility_ll.h:25(inlined by) esp_cpu_reset at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:49
+--- 0x4ff03352: esp_cpu_wait_for_intr at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:57
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40024530: app_main at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+--- 0x4ff05e29: _esp_error_check_failed at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+--- Stack dump detected
+--- 0x4ff05e80: panic_abort at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+--- 0x4ff05e32: esp_vApplicationTickHook at C:/esp/v5.5.5/esp-idf/components/esp_system/freertos_hooks.c:31
+--- 0x4ff00003: _vector_table at ??:?
+--- Backtrace:
+
+
+--- 0x4ff0320a: cpu_utility_ll_reset_cpu at C:/esp/v5.5.5/esp-idf/components/hal/esp32p4/include/hal/cpu_utility_ll.h:25(inlined by) esp_cpu_reset at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:49
+--- 0x4ff03352: esp_cpu_wait_for_intr at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:57
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40024530: app_main at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+--- 0x4ff05e29: _esp_error_check_failed at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+--- Stack dump detected
+--- 0x4ff05e80: panic_abort at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+--- 0x4ff05e32: esp_vApplicationTickHook at C:/esp/v5.5.5/esp-idf/components/esp_system/freertos_hooks.c:31
+--- WARNING: Failed to run gdb_panic_server.py script: Command '['riscv32-esp-elf-gdb', '--batch', '-n', "C:\\Users\\vanshika\\OneDrive\\Desktop\\HEIMDALL'S WATCH\\gps subsystem\\esp32-gps-client\\build\\heimdall_gps_client.elf", '-ex', "add-symbol-file C:\\\\Users\\\\vanshika\\\\OneDrive\\\\Desktop\\\\HEIMDALL'S WATCH\\\\gps subsystem\\\\esp32-gps-client\\\\build\\\\bootloader\\\\bootloader.elf", '-ex', 'target remote | "C:\\\\Espressif\\\\tools\\\\python\\\\v5.5.5\\\\venv\\\\Scripts\\\\python.exe" -m esp_idf_panic_decoder --target esp32p4 "C:\\\\Users\\\\vanshika\\\\AppData\\\\Local\\\\Temp\\\\tmpii2ag20w"', '-ex', 'bt']' returned non-zero exit status 1.
+add symbol table from file "C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf"
+C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf: No such file or directory.
+Traceback (most recent call last):
+  File "<frozen runpy>", line 198, in _run_module_as_main
+  File "<frozen runpy>", line 88, in _run_code
+  File "C:\Espressif\tools\python\v5.5.5\venv\Lib\site-packages\esp_idf_panic_decoder\__main__.py", line 4, in <module>
+    main()
+    ~~~~^^
+  File "C:\Espressif\tools\python\v5.5.5\venv\Lib\site-packages\esp_idf_panic_decoder\gdb_panic_server.py", line 276, in main
+    panic_info = PANIC_OUTPUT_PARSERS.get(args.target, PANIC_OUTPUT_PARSERS['default'])(args.input_file.read())
+  File "C:\Espressif\tools\python\v5.5.5\venv\Lib\site-packages\esp_idf_panic_decoder\gdb_panic_server.py", line 130, in parse_idf_riscv_panic_output
+    raise ValueError("Couldn't parse panic handler output")
+ValueError: Couldn't parse panic handler output
+Remote communication error.  Target disconnected: could not peek into pipe (error 109): The pipe has been ended.
+No stack.
+
+
+
+--- 0x4ff0320a: cpu_utility_ll_reset_cpu at C:/esp/v5.5.5/esp-idf/components/hal/esp32p4/include/hal/cpu_utility_ll.h:25(inlined by) esp_cpu_reset at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:49
+--- 0x4ff03352: esp_cpu_wait_for_intr at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:57
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40024530: app_main at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+--- 0x4ff05e29: _esp_error_check_failed at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+--- Stack dump detected
+--- 0x4ff05e80: panic_abort at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+--- 0x4ff05e32: esp_vApplicationTickHook at C:/esp/v5.5.5/esp-idf/components/esp_system/freertos_hooks.c:31
+--- 0x4ff00003: _vector_table at ??:?
+--- Backtrace:
+
+
+--- 0x4ff0320a: cpu_utility_ll_reset_cpu at C:/esp/v5.5.5/esp-idf/components/hal/esp32p4/include/hal/cpu_utility_ll.h:25(inlined by) esp_cpu_reset at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:49
+--- 0x4ff03352: esp_cpu_wait_for_intr at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:57
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40024530: app_main at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+--- 0x4ff05e29: _esp_error_check_failed at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+--- Stack dump detected
+--- 0x4ff05e80: panic_abort at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+--- 0x4ff05e32: esp_vApplicationTickHook at C:/esp/v5.5.5/esp-idf/components/esp_system/freertos_hooks.c:31
+--- 0x4ff00003: _vector_table at ??:?
+--- Backtrace:
+
+
+--- 0x4ff0320a: cpu_utility_ll_reset_cpu at C:/esp/v5.5.5/esp-idf/components/hal/esp32p4/include/hal/cpu_utility_ll.h:25(inlined by) esp_cpu_reset at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:49
+--- 0x4ff03352: esp_cpu_wait_for_intr at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:57
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x40024530: app_main at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+--- 0x4ff05e29: _esp_error_check_failed at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+--- Stack dump detected
+--- 0x4ff05e80: panic_abort at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+--- 0x4ff05e32: esp_vApplicationTickHook at C:/esp/v5.5.5/esp-idf/components/esp_system/freertos_hooks.c:31
+--- 0x4ff00003: _vector_table at ??:?
+--- Backtrace:
+
+
+--- 0x4ff0320a: cpu_utility_ll_reset_cpu at C:/esp/v5.5.5/esp-idf/components/hal/esp32p4/include/hal/cpu_utility_ll.h:25(inlined by) esp_cpu_reset at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:49
+--- 0x4ff03352: esp_cpu_wait_for_intr at C:/esp/v5.5.5/esp-idf/components/esp_hw_support/cpu.c:57
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+

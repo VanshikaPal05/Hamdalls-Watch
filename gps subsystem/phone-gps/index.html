@@ -1,0 +1,386 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+  <title>Heimdall's Watch GPS</title>
+
+  <style>
+    * {
+      box-sizing: border-box;
+    }
+
+    body {
+      margin: 0;
+      min-height: 100vh;
+      background: #080808;
+      color: white;
+      font-family: Arial, Helvetica, sans-serif;
+
+      display: flex;
+      justify-content: center;
+      align-items: center;
+    }
+
+    .container {
+      width: 92%;
+      max-width: 430px;
+    }
+
+    h1 {
+      margin-bottom: 5px;
+      font-size: 28px;
+    }
+
+    .subtitle {
+      color: #888;
+      margin-bottom: 30px;
+    }
+
+    .status {
+      padding: 15px;
+      border: 1px solid #333;
+      border-radius: 12px;
+      margin-bottom: 20px;
+    }
+
+    .status-dot {
+      display: inline-block;
+      width: 10px;
+      height: 10px;
+      background: #777;
+      border-radius: 50%;
+      margin-right: 8px;
+    }
+
+    .active {
+      background: #00ff88;
+    }
+
+    .gps-card {
+      background: #111;
+      border: 1px solid #242424;
+      border-radius: 18px;
+      padding: 20px;
+      margin-bottom: 20px;
+    }
+
+    .row {
+      display: flex;
+      justify-content: space-between;
+      margin: 18px 0;
+    }
+
+    .label {
+      color: #888;
+    }
+
+    .value {
+      font-weight: bold;
+    }
+
+    button {
+      width: 100%;
+      padding: 16px;
+      border-radius: 12px;
+      border: none;
+      font-size: 16px;
+      font-weight: bold;
+      margin-bottom: 12px;
+      cursor: pointer;
+    }
+
+    #startButton {
+      background: white;
+      color: black;
+    }
+
+    #stopButton {
+      background: #222;
+      color: white;
+    }
+
+    .error {
+      color: #ff5c5c;
+      margin-top: 15px;
+      font-size: 14px;
+    }
+
+    .timestamp {
+      color: #666;
+      text-align: center;
+      font-size: 13px;
+      margin-top: 20px;
+    }
+  </style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>HEIMDALL'S WATCH</h1>
+  <div class="subtitle">Phone GPS Subsystem</div>
+
+  <div class="status">
+    <span id="statusDot" class="status-dot"></span>
+    <span id="statusText">GPS inactive</span>
+  </div>
+
+  <div class="gps-card">
+
+    <div class="row">
+      <span class="label">Latitude</span>
+      <span id="latitude" class="value">--</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Longitude</span>
+      <span id="longitude" class="value">--</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Accuracy</span>
+      <span id="accuracy" class="value">--</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Altitude</span>
+      <span id="altitude" class="value">--</span>
+    </div>
+
+    <div class="row">
+      <span class="label">Speed</span>
+      <span id="speed" class="value">--</span>
+    </div>
+
+  </div>
+
+  <button id="startButton">START GPS</button>
+  <button id="stopButton">STOP GPS</button>
+
+  <div id="error" class="error"></div>
+
+  <div id="timestamp" class="timestamp">
+    No GPS update yet
+  </div>
+
+</div>
+
+
+<script>
+
+let watchID = null;
+
+const latitudeElement = document.getElementById("latitude");
+const longitudeElement = document.getElementById("longitude");
+const accuracyElement = document.getElementById("accuracy");
+const altitudeElement = document.getElementById("altitude");
+const speedElement = document.getElementById("speed");
+
+const statusText = document.getElementById("statusText");
+const statusDot = document.getElementById("statusDot");
+
+const errorElement = document.getElementById("error");
+const timestampElement = document.getElementById("timestamp");
+
+
+function locationSuccess(position) {
+
+    const coords = position.coords;
+
+    fetch("https://heimdall-s-watch-default-rtdb.asia-southeast1.firebasedatabase.app/live_location.json", {
+        method: "PUT",
+        headers: {
+            "Content-Type": "application/json"
+        },
+        body: JSON.stringify({
+            latitude: coords.latitude,
+            longitude: coords.longitude,
+            accuracy: coords.accuracy,
+            altitude: coords.altitude,
+            speed: coords.speed,
+            timestamp: Date.now()
+        })
+    })
+    .then(response => {
+        if (!response.ok) {
+            throw new Error("Firebase upload failed");
+        }
+        return response.json();
+    })
+    .then(data => {
+        console.log("Location uploaded:", data);
+    })
+    .catch(error => {
+        console.error("Firebase error:", error);
+    });
+
+
+    latitudeElement.textContent =
+        coords.latitude.toFixed(6);
+
+    longitudeElement.textContent =
+        coords.longitude.toFixed(6);
+
+    accuracyElement.textContent =
+        "±" + coords.accuracy.toFixed(1) + " m";
+
+
+    if (coords.altitude !== null) {
+
+        altitudeElement.textContent =
+            coords.altitude.toFixed(1) + " m";
+
+    } else {
+
+        altitudeElement.textContent =
+            "Unavailable";
+
+    }
+
+
+    if (coords.speed !== null) {
+
+        speedElement.textContent =
+            (coords.speed * 3.6).toFixed(1) + " km/h";
+
+    } else {
+
+        speedElement.textContent =
+            "0 km/h";
+
+    }
+
+
+    statusText.textContent = "GPS ACTIVE";
+
+    statusDot.classList.add("active");
+
+    errorElement.textContent = "";
+
+
+    const time =
+        new Date(position.timestamp);
+
+    timestampElement.textContent =
+        "Last GPS update: " +
+        time.toLocaleTimeString();
+}
+
+
+
+function locationError(error) {
+
+    statusText.textContent =
+        "GPS ERROR";
+
+    statusDot.classList.remove("active");
+
+
+    switch(error.code) {
+
+        case error.PERMISSION_DENIED:
+
+            errorElement.textContent =
+                "Location permission denied.";
+
+            break;
+
+
+        case error.POSITION_UNAVAILABLE:
+
+            errorElement.textContent =
+                "GPS position unavailable.";
+
+            break;
+
+
+        case error.TIMEOUT:
+
+            errorElement.textContent =
+                "GPS request timed out.";
+
+            break;
+
+
+        default:
+
+            errorElement.textContent =
+                "Unknown GPS error.";
+
+    }
+
+}
+
+
+
+function startGPS() {
+
+    if (!navigator.geolocation) {
+
+        errorElement.textContent =
+            "Geolocation is not supported by this browser.";
+
+        return;
+
+    }
+
+
+    statusText.textContent =
+        "Starting GPS...";
+
+
+    watchID =
+        navigator.geolocation.watchPosition(
+
+            locationSuccess,
+
+            locationError,
+
+            {
+                enableHighAccuracy: true,
+                timeout: 10000,
+                maximumAge: 0
+            }
+
+        );
+
+}
+
+
+
+function stopGPS() {
+
+    if (watchID !== null) {
+
+        navigator.geolocation.clearWatch(watchID);
+
+        watchID = null;
+
+    }
+
+
+    statusText.textContent =
+        "GPS stopped";
+
+    statusDot.classList.remove("active");
+
+}
+
+
+
+document
+    .getElementById("startButton")
+    .addEventListener("click", startGPS);
+
+
+document
+    .getElementById("stopButton")
+    .addEventListener("click", stopGPS);
+
+</script>
+
+</body>
+</html>

@@ -1,0 +1,1349 @@
+Command: C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe C:\esp\v5.5.5\esp-idf\tools/idf_monitor.py -p COM13 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32p4 --revision 100 --decode-panic backtrace C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\heimdall_gps_client.elf C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe' 'C:\esp\v5.5.5\esp-idf\tools\idf.py' '-p' 'COM13'
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0x1 (POWERON),boot:0x20f (SPI_FAST_FLASH_BOOT)
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (25) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (26) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (26) boot: Multicore bootloader[0m
+[0;32mI (27) boot: chip revision: v1.3[0m
+[0;32mI (29) boot: efuse block revision: v0.3[0m
+[0;32mI (32) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (36) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (40) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (44) boot: Enabling RNG early entropy source...[0m
+[0;32mI (48) boot: Partition Table:[0m
+[0;32mI (51) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (57) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (63) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (70) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (78) boot: End of partition table[0m
+[0;32mI (80) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (140) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (142) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (148) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (252) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (265) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (272) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (273) boot: Disabling RNG early entropy source...[0m
+[0;32mI (284) cpu_start: Multicore app[0m
+[0;32mI (294) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (295) cpu_start: Pro cpu start user code[0m
+[0;32mI (295) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (297) app_init: Application information:[0m
+[0;32mI (300) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (305) app_init: App version:      1[0m
+[0;32mI (309) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (314) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (318) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (322) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (326) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (330) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (334) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (340) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (346) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (351) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (356) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (361) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (367) spi_flash: detected chip: gd[0m
+[0;32mI (370) spi_flash: flash io: dio[0m
+[0;33mW (373) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (385) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (389) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (397) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (402) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (413) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (418) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (424) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (424) main_task: Started on CPU0[0m
+[0;32mI (434) main_task: Calling app_main()[0m
+[0;32mI (454) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (454) example_connect: Start example_connect.[0m
+[0;32mI (454) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (454) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (454) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1984) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1984) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1984) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2024) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2024) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2124) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2124) transport: set_transport_state: 1[0m
+[0;32mI (2124) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2224) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2224) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2224) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2224) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2224) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2234) transport: EVENT: 12[0m
+[0;32mI (2234) transport: Identified slave [esp32c6][0m
+[0;32mI (2234) transport: EVENT: 11[0m
+[0;32mI (2244) transport: capabilities: 0xd[0m
+[0;32mI (2244) transport: Features supported are:[0m
+[0;32mI (2244) transport: 	 * WLAN[0m
+[0;32mI (2254) transport: 	   - HCI over SDIO[0m
+[0;32mI (2254) transport: 	   - BLE only[0m
+[0;32mI (2254) transport: EVENT: 13[0m
+[0;33mW (2264) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2274) transport: ESP board type is : 13 [0m
+
+[0;32mI (2274) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2284) H_API: Transport active[0m
+[0;32mI (2284) transport: Slave chip Id[12][0m
+[0;32mI (2284) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2294) transport: transport_delayed_init[0m
+[0;32mI (2294) esp_cli: Registering command: crash[0m
+[0;32mI (2304) esp_cli: Registering command: reboot[0m
+[0;32mI (2304) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2304) esp_cli: Registering command: task-dump[0m
+[0;32mI (2314) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2314) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2324) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2324) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2334) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2334) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2334) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2344) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2424) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2634) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2664) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2664) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2684) example_connect: Waiting for IP(s)[0m
+[0;32mI (5084) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5094) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5094) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7504) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7504) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7504) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9924) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9924) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9924) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12334) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12334) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12334) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14754) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14754) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14754) H_API: esp_wifi_remote_connect[0m
+[0;32mI (17164) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (17164) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (17164) H_API: esp_wifi_remote_connect[0m
+[0;32mI (19584) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (19584) example_connect: WiFi Connect failed 7 times, stop reconnect.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x40024530
+file: "./main/main.c" line 159
+func: app_main
+expression: example_connect()
+
+abort() was called at PC 0x4ff05e29 on core 0
+Core  0 register dump:
+MEPC    : 0x4ff05e80  RA      : 0x4ff05e32  SP      : 0x4ff392b0  GP      : 0x4ff11d00  
+TP      : 0x4ff393a0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4ff39314  A0      : 0x4ff392dc  A1      : 0x4ff39312  
+A2      : 0x00000000  A3      : 0x4ff39309  A4      : 0x00000001  A5      : 0x4ff17000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00011880  MTVEC   : 0x4ff00003  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf"
+C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf: No such file or directory.
+panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+#1  0x4ff05e32 in esp_system_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4ff0e96c in abort () at C:/esp/v5.5.5/esp-idf/components/newlib/src/abort.c:38
+#3  0x4ff05e2c in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x400b1810 "", line=line@entry=159, function=function@entry=0x400d4b44 <__func__.0> "", expression=expression@entry=0x400b188c "") at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+#4  0x40024534 in app_main () at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+#5  0x40090076 in main_task (args=<error reading variable: value has been optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/app_startup.c:215
+#6  0x4ff07086 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:257
+
+
+
+ELF file SHA256: 6b3dce65d
+
+Rebooting...
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0xc (SW_CPU_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4ff0320a
+Core1 Saved PC:0x4ff03352
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (33) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.3[0m
+[0;32mI (36) boot: efuse block revision: v0.3[0m
+[0;32mI (40) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (274) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (289) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (294) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (298) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (302) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (320) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (326) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (331) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (336) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (341) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (347) spi_flash: detected chip: gd[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;33mW (353) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (369) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (378) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (382) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (393) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (434) example_connect: Start example_connect.[0m
+[0;32mI (434) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (434) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (434) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1964) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1964) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1964) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2004) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2004) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2104) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2104) transport: set_transport_state: 1[0m
+[0;32mI (2104) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2204) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2204) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2204) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2204) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2204) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2214) transport: EVENT: 12[0m
+[0;32mI (2214) transport: Identified slave [esp32c6][0m
+[0;32mI (2214) transport: EVENT: 11[0m
+[0;32mI (2224) transport: capabilities: 0xd[0m
+[0;32mI (2224) transport: Features supported are:[0m
+[0;32mI (2224) transport: 	 * WLAN[0m
+[0;32mI (2234) transport: 	   - HCI over SDIO[0m
+[0;32mI (2234) transport: 	   - BLE only[0m
+[0;32mI (2234) transport: EVENT: 13[0m
+[0;33mW (2244) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2254) transport: ESP board type is : 13 [0m
+
+[0;32mI (2254) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2264) H_API: Transport active[0m
+[0;32mI (2264) transport: Slave chip Id[12][0m
+[0;32mI (2264) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2274) transport: transport_delayed_init[0m
+[0;32mI (2274) esp_cli: Registering command: crash[0m
+[0;32mI (2284) esp_cli: Registering command: reboot[0m
+[0;32mI (2284) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2284) esp_cli: Registering command: task-dump[0m
+[0;32mI (2294) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2294) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2304) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2304) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2314) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2314) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2314) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2324) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2404) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2614) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2644) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2644) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2664) example_connect: Waiting for IP(s)[0m
+[0;32mI (5064) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5064) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5074) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7484) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7484) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7484) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9894) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9904) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9904) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12314) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12314) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12314) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14734) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14734) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14734) H_API: esp_wifi_remote_connect[0m
+[0;32mI (17144) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (17144) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (17144) H_API: esp_wifi_remote_connect[0m
+[0;32mI (19564) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (19564) example_connect: WiFi Connect failed 7 times, stop reconnect.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x40024530
+file: "./main/main.c" line 159
+func: app_main
+expression: example_connect()
+
+abort() was called at PC 0x4ff05e29 on core 0
+Core  0 register dump:
+MEPC    : 0x4ff05e80  RA      : 0x4ff05e32  SP      : 0x4ff392b0  GP      : 0x4ff11d00  
+TP      : 0x4ff393a0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4ff39314  A0      : 0x4ff392dc  A1      : 0x4ff39312  
+A2      : 0x00000000  A3      : 0x4ff39309  A4      : 0x00000001  A5      : 0x4ff17000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00011880  MTVEC   : 0x4ff00003  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf"
+C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf: No such file or directory.
+panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+#1  0x4ff05e32 in esp_system_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4ff0e96c in abort () at C:/esp/v5.5.5/esp-idf/components/newlib/src/abort.c:38
+#3  0x4ff05e2c in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x400b1810 "", line=line@entry=159, function=function@entry=0x400d4b44 <__func__.0> "", expression=expression@entry=0x400b188c "") at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+#4  0x40024534 in app_main () at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+#5  0x40090076 in main_task (args=<error reading variable: value has been optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/app_startup.c:215
+#6  0x4ff07086 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:257
+
+
+
+ELF file SHA256: 6b3dce65d
+
+Rebooting...
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0xc (SW_CPU_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4ff0320a
+Core1 Saved PC:0x4ff03352
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (33) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.3[0m
+[0;32mI (36) boot: efuse block revision: v0.3[0m
+[0;32mI (40) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (274) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (289) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (294) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (298) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (302) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (320) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (326) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (331) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (336) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (341) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (347) spi_flash: detected chip: gd[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;33mW (353) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (369) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (378) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (382) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (393) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (434) example_connect: Start example_connect.[0m
+[0;32mI (434) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (434) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (434) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1964) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1964) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1964) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2004) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2004) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2104) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2104) transport: set_transport_state: 1[0m
+[0;32mI (2104) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2204) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2204) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2204) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2204) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2204) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2214) transport: EVENT: 12[0m
+[0;32mI (2214) transport: Identified slave [esp32c6][0m
+[0;32mI (2214) transport: EVENT: 11[0m
+[0;32mI (2224) transport: capabilities: 0xd[0m
+[0;32mI (2224) transport: Features supported are:[0m
+[0;32mI (2224) transport: 	 * WLAN[0m
+[0;32mI (2234) transport: 	   - HCI over SDIO[0m
+[0;32mI (2234) transport: 	   - BLE only[0m
+[0;32mI (2234) transport: EVENT: 13[0m
+[0;33mW (2244) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2254) transport: ESP board type is : 13 [0m
+
+[0;32mI (2254) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2264) H_API: Transport active[0m
+[0;32mI (2264) transport: Slave chip Id[12][0m
+[0;32mI (2264) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2274) transport: transport_delayed_init[0m
+[0;32mI (2274) esp_cli: Registering command: crash[0m
+[0;32mI (2284) esp_cli: Registering command: reboot[0m
+[0;32mI (2284) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2284) esp_cli: Registering command: task-dump[0m
+[0;32mI (2294) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2294) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2304) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2304) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2314) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2314) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2314) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2324) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2404) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2614) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2644) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2644) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2664) example_connect: Waiting for IP(s)[0m
+[0;32mI (5064) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5074) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5074) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7484) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7484) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7484) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9904) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9904) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9904) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12314) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12314) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12314) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14734) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14734) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14734) H_API: esp_wifi_remote_connect[0m
+[0;32mI (17144) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (17144) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (17144) H_API: esp_wifi_remote_connect[0m
+[0;32mI (19564) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (19564) example_connect: WiFi Connect failed 7 times, stop reconnect.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x40024530
+file: "./main/main.c" line 159
+func: app_main
+expression: example_connect()
+
+abort() was called at PC 0x4ff05e29 on core 0
+Core  0 register dump:
+MEPC    : 0x4ff05e80  RA      : 0x4ff05e32  SP      : 0x4ff392b0  GP      : 0x4ff11d00  
+TP      : 0x4ff393a0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4ff39314  A0      : 0x4ff392dc  A1      : 0x4ff39312  
+A2      : 0x00000000  A3      : 0x4ff39309  A4      : 0x00000001  A5      : 0x4ff17000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00011880  MTVEC   : 0x4ff00003  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf"
+C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf: No such file or directory.
+panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+#1  0x4ff05e32 in esp_system_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4ff0e96c in abort () at C:/esp/v5.5.5/esp-idf/components/newlib/src/abort.c:38
+#3  0x4ff05e2c in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x400b1810 "", line=line@entry=159, function=function@entry=0x400d4b44 <__func__.0> "", expression=expression@entry=0x400b188c "") at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+#4  0x40024534 in app_main () at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+#5  0x40090076 in main_task (args=<error reading variable: value has been optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/app_startup.c:215
+#6  0x4ff07086 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:257
+
+
+
+ELF file SHA256: 6b3dce65d
+
+Rebooting...
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0xc (SW_CPU_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4ff0320a
+Core1 Saved PC:0x4ff03352
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (33) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.3[0m
+[0;32mI (36) boot: efuse block revision: v0.3[0m
+[0;32mI (40) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (274) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (289) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (294) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (298) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (302) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (320) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (326) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (331) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (336) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (341) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (347) spi_flash: detected chip: gd[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;33mW (353) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (369) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (378) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (382) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (393) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (434) example_connect: Start example_connect.[0m
+[0;32mI (434) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (434) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (434) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1964) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1964) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1964) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2004) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2004) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2104) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2104) transport: set_transport_state: 1[0m
+[0;32mI (2104) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2204) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2204) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2204) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2204) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2204) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2214) transport: EVENT: 12[0m
+[0;32mI (2214) transport: Identified slave [esp32c6][0m
+[0;32mI (2214) transport: EVENT: 11[0m
+[0;32mI (2224) transport: capabilities: 0xd[0m
+[0;32mI (2224) transport: Features supported are:[0m
+[0;32mI (2224) transport: 	 * WLAN[0m
+[0;32mI (2234) transport: 	   - HCI over SDIO[0m
+[0;32mI (2234) transport: 	   - BLE only[0m
+[0;32mI (2234) transport: EVENT: 13[0m
+[0;33mW (2244) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2254) transport: ESP board type is : 13 [0m
+
+[0;32mI (2254) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2264) H_API: Transport active[0m
+[0;32mI (2264) transport: Slave chip Id[12][0m
+[0;32mI (2264) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2274) transport: transport_delayed_init[0m
+[0;32mI (2274) esp_cli: Registering command: crash[0m
+[0;32mI (2284) esp_cli: Registering command: reboot[0m
+[0;32mI (2284) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2284) esp_cli: Registering command: task-dump[0m
+[0;32mI (2294) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2294) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2304) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2304) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2314) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2314) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2314) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2324) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2404) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2614) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2644) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2644) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2664) example_connect: Waiting for IP(s)[0m
+[0;32mI (5064) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5064) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5074) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7484) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7484) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7484) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9904) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9904) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9904) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12314) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12314) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12314) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14734) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14734) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14734) H_API: esp_wifi_remote_connect[0m
+[0;32mI (17144) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (17144) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (17144) H_API: esp_wifi_remote_connect[0m
+[0;32mI (19564) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (19564) example_connect: WiFi Connect failed 7 times, stop reconnect.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x40024530
+file: "./main/main.c" line 159
+func: app_main
+expression: example_connect()
+
+abort() was called at PC 0x4ff05e29 on core 0
+Core  0 register dump:
+MEPC    : 0x4ff05e80  RA      : 0x4ff05e32  SP      : 0x4ff392b0  GP      : 0x4ff11d00  
+TP      : 0x4ff393a0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4ff39314  A0      : 0x4ff392dc  A1      : 0x4ff39312  
+A2      : 0x00000000  A3      : 0x4ff39309  A4      : 0x00000001  A5      : 0x4ff17000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00011880  MTVEC   : 0x4ff00003  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+Stack memory:
+4ff392b0: 0x400b1810 0x40024534 0x4ff39310 0x4ff0e96c 0x4ff393a0 0x4fc0a9f8 0x20000000 0x4ff135d4
+4ff392d0: 0x4ff39314 0x4ff135f0 0x4ff39310 0x726f6261 0x20292874 0x20736177 0x6c6c6163 0x61206465
+4ff392f0: 0x43502074 0x34783020 0x35306666 0x20393265 0x63206e6f 0x2065726f 0x00000030 0x00000000
+4ff39310: 0x00000030 0x30666634 0x39326535 0x00000000 0x00000000 0x00000003 0x400a2000 0x4ff05e2c
+4ff39330: 0x400b1708 0x00000194 0x400a2000 0x40024534 0x400a1e40 0x00000194 0x00000000 0x40090076
+4ff39350: 0x00000000 0x00001388 0x00000003 0x00000000 0x00000000 0x00000000 0x00000000 0x4ff07086
+4ff39370: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ff39390: 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000000 0x4ff383c8 0x4ff383c8 0x00000000
+4ff393b0: 0x00000000 0x00000000 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0x00000160 0x4ff39170
+4ff393d0: 0x000002d4 0x4ff143f4 0x4ff143f4 0x4ff393cc 0x4ff143ec 0x00000018 0x4ff3e62c 0x4ff3e62c
+4ff393f0: 0x4ff393cc 0x00000000 0x00000001 0x4ff383c8 0x6e69616d 0x00000000 0x00000000 0x00000000
+4ff39410: 0x00000000 0x4ff393c0 0x00000001 0x00000000 0x00000000 0x00000000 0x00000000 0x4ff17988
+4ff39430: 0x4ff179f0 0x4ff17a58 0x00000000 0x00000000 0x00000001 0x00000000 0x00000000 0x00000000
+4ff39450: 0x4000765e 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ff39470: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ff39490: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ff394b0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ff394d0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ff394f0: 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000 0x00000000
+4ff39510: 0x00000000 0x00000000 0x00000000 0x00000000 0x729e8c53 0x3ae2811e 0x4ff393c4 0x00000600
+4ff39530: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39550: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39570: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39590: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+5a5
+4ff395d0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff395f0: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39610: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39630: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39650: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39670: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+4ff39690: 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5 0xa5a5a5a5
+
+
+
+ELF file SHA256: 6b3dce65d
+
+Rebooting...
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0xc (SW_CPU_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4ff0320a
+Core1 Saved PC:0x4ff03352
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (33) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.3[0m
+[0;32mI (36) boot: efuse block revision: v0.3[0m
+[0;32mI (40) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (274) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (289) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (294) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (298) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (302) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (320) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (326) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (331) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (336) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (341) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (347) spi_flash: detected chip: gd[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;33mW (353) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (369) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (378) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (382) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (393) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (434) example_connect: Start example_connect.[0m
+[0;32mI (434) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (434) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (434) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1964) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1964) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1964) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2004) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2004) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2104) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2104) transport: set_transport_state: 1[0m
+[0;32mI (2104) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2204) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2204) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2204) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2204) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2204) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2214) transport: EVENT: 12[0m
+[0;32mI (2214) transport: Identified slave [esp32c6][0m
+[0;32mI (2214) transport: EVENT: 11[0m
+[0;32mI (2224) transport: capabilities: 0xd[0m
+[0;32mI (2224) transport: Features supported are:[0m
+[0;32mI (2224) transport: 	 * WLAN[0m
+[0;32mI (2234) transport: 	   - HCI over SDIO[0m
+[0;32mI (2234) transport: 	   - BLE only[0m
+[0;32mI (2234) transport: EVENT: 13[0m
+[0;33mW (2244) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2254) transport: ESP board type is : 13 [0m
+
+[0;32mI (2254) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2264) H_API: Transport active[0m
+[0;32mI (2264) transport: Slave chip Id[12][0m
+[0;32mI (2264) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2274) transport: transport_delayed_init[0m
+[0;32mI (2274) esp_cli: Registering command: crash[0m
+[0;32mI (2284) esp_cli: Registering command: reboot[0m
+[0;32mI (2284) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2284) esp_cli: Registering command: task-dump[0m
+[0;32mI (2294) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2294) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2304) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2304) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2314) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2314) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2314) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2324) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2404) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2614) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2644) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2644) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2664) example_connect: Waiting for IP(s)[0m
+[0;32mI (5064) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5064) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5074) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7484) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7484) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7484) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9904) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9904) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9904) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12314) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12314) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12314) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14734) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14734) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14734) H_API: esp_wifi_remote_connect[0m
+[0;32mI (17144) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (17144) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (17144) H_API: esp_wifi_remote_connect[0m
+[0;32mI (19564) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (19564) example_connect: WiFi Connect failed 7 times, stop reconnect.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x40024530
+file: "./main/main.c" line 159
+func: app_main
+expression: example_connect()
+
+abort() was called at PC 0x4ff05e29 on core 0
+Core  0 register dump:
+MEPC    : 0x4ff05e80  RA      : 0x4ff05e32  SP      : 0x4ff392b0  GP      : 0x4ff11d00  
+TP      : 0x4ff393a0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4ff39314  A0      : 0x4ff392dc  A1      : 0x4ff39312  
+A2      : 0x00000000  A3      : 0x4ff39309  A4      : 0x00000001  A5      : 0x4ff17000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00011880  MTVEC   : 0x4ff00003  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf"
+C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf: No such file or directory.
+panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+#1  0x4ff05e32 in esp_system_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4ff0e96c in abort () at C:/esp/v5.5.5/esp-idf/components/newlib/src/abort.c:38
+#3  0x4ff05e2c in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x400b1810 "", line=line@entry=159, function=function@entry=0x400d4b44 <__func__.0> "", expression=expression@entry=0x400b188c "") at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+#4  0x40024534 in app_main () at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+#5  0x40090076 in main_task (args=<error reading variable: value has been optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/app_startup.c:215
+#6  0x4ff07086 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:257
+
+
+
+ELF file SHA256: 6b3dce65d
+
+Rebooting...
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0xc (SW_CPU_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4ff0320a
+Core1 Saved PC:0x4ff03352
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (33) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.3[0m
+[0;32mI (36) boot: efuse block revision: v0.3[0m
+[0;32mI (40) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (274) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (289) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (294) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (298) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (302) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (320) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (326) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (331) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (336) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (341) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (347) spi_flash: detected chip: gd[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;33mW (353) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (369) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (378) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (382) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (393) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (434) example_connect: Start example_connect.[0m
+[0;32mI (434) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (434) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (434) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1964) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1964) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1964) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2004) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2004) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2104) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2104) transport: set_transport_state: 1[0m
+[0;32mI (2104) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2204) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2204) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2204) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2204) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2204) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2214) transport: EVENT: 12[0m
+[0;32mI (2214) transport: Identified slave [esp32c6][0m
+[0;32mI (2214) transport: EVENT: 11[0m
+[0;32mI (2224) transport: capabilities: 0xd[0m
+[0;32mI (2224) transport: Features supported are:[0m
+[0;32mI (2224) transport: 	 * WLAN[0m
+[0;32mI (2234) transport: 	   - HCI over SDIO[0m
+[0;32mI (2234) transport: 	   - BLE only[0m
+[0;32mI (2234) transport: EVENT: 13[0m
+[0;33mW (2244) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2254) transport: ESP board type is : 13 [0m
+
+[0;32mI (2254) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2264) H_API: Transport active[0m
+[0;32mI (2264) transport: Slave chip Id[12][0m
+[0;32mI (2264) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2274) transport: transport_delayed_init[0m
+[0;32mI (2274) esp_cli: Registering command: crash[0m
+[0;32mI (2284) esp_cli: Registering command: reboot[0m
+[0;32mI (2284) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2284) esp_cli: Registering command: task-dump[0m
+[0;32mI (2294) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2294) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2304) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2304) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2314) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2314) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2314) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2324) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2404) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2614) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2644) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2644) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2664) example_connect: Waiting for IP(s)[0m
+[0;32mI (5064) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5074) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5074) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7484) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7484) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7484) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9904) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9904) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9904) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12314) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12314) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12314) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14734) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14734) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14734) H_API: esp_wifi_remote_connect[0m
+[0;32mI (17144) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (17144) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (17144) H_API: esp_wifi_remote_connect[0m
+[0;32mI (19564) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (19564) example_connect: WiFi Connect failed 7 times, stop reconnect.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x40024530
+file: "./main/main.c" line 159
+func: app_main
+expression: example_connect()
+
+abort() was called at PC 0x4ff05e29 on core 0
+Core  0 register dump:
+MEPC    : 0x4ff05e80  RA      : 0x4ff05e32  SP      : 0x4ff392b0  GP      : 0x4ff11d00  
+TP      : 0x4ff393a0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4ff39314  A0      : 0x4ff392dc  A1      : 0x4ff39312  
+A2      : 0x00000000  A3      : 0x4ff39309  A4      : 0x00000001  A5      : 0x4ff17000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00011880  MTVEC   : 0x4ff00003  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf"
+C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf: No such file or directory.
+panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+#1  0x4ff05e32 in esp_system_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4ff0e96c in abort () at C:/esp/v5.5.5/esp-idf/components/newlib/src/abort.c:38
+#3  0x4ff05e2c in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x400b1810 "", line=line@entry=159, function=function@entry=0x400d4b44 <__func__.0> "", expression=expression@entry=0x400b188c "") at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+#4  0x40024534 in app_main () at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+#5  0x40090076 in main_task (args=<error reading variable: value has been optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/app_startup.c:215
+#6  0x4ff07086 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:257
+
+
+
+ELF file SHA256: 6b3dce65d
+
+Rebooting...
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0xc (SW_CPU_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4ff0320a
+Core1 Saved PC:0x4ff03352
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (33) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.3[0m
+[0;32mI (36) boot: efuse block revision: v0.3[0m
+[0;32mI (40) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (274) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (289) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (294) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (298) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (302) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (320) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (326) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (331) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (336) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (341) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (347) spi_flash: detected chip: gd[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;33mW (353) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (369) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (378) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (382) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (393) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (434) example_connect: Start example_connect.[0m
+[0;32mI (434) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (434) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (434) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1964) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1964) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1964) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2004) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2004) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2104) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2104) transport: set_transport_state: 1[0m
+[0;32mI (2104) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2204) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2204) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2204) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2204) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2204) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2214) transport: EVENT: 12[0m
+[0;32mI (2214) transport: Identified slave [esp32c6][0m
+[0;32mI (2214) transport: EVENT: 11[0m
+[0;32mI (2224) transport: capabilities: 0xd[0m
+[0;32mI (2224) transport: Features supported are:[0m
+[0;32mI (2224) transport: 	 * WLAN[0m
+[0;32mI (2234) transport: 	   - HCI over SDIO[0m
+[0;32mI (2234) transport: 	   - BLE only[0m
+[0;32mI (2234) transport: EVENT: 13[0m
+[0;33mW (2244) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2254) transport: ESP board type is : 13 [0m
+
+[0;32mI (2254) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2264) H_API: Transport active[0m
+[0;32mI (2264) transport: Slave chip Id[12][0m
+[0;32mI (2264) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2274) transport: transport_delayed_init[0m
+[0;32mI (2274) esp_cli: Registering command: crash[0m
+[0;32mI (2284) esp_cli: Registering command: reboot[0m
+[0;32mI (2284) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2284) esp_cli: Registering command: task-dump[0m
+[0;32mI (2294) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2294) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2304) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2304) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2314) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2314) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2314) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2324) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2404) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2614) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2644) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2644) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2664) example_connect: Waiting for IP(s)[0m
+[0;32mI (5064) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5074) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5074) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7484) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7484) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7484) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9904) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9904) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9904) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12314) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12314) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12314) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14734) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14734) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14734) H_API: esp_wifi_remote_connect[0m
+[0;32mI (17144) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (17144) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (17144) H_API: esp_wifi_remote_connect[0m
+[0;32mI (19564) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (19564) example_connect: WiFi Connect failed 7 times, stop reconnect.[0m
+ESP_ERROR_CHECK failed: esp_err_t 0xffffffff (ESP_FAIL) at 0x40024530
+file: "./main/main.c" line 159
+func: app_main
+expression: example_connect()
+
+abort() was called at PC 0x4ff05e29 on core 0
+Core  0 register dump:
+MEPC    : 0x4ff05e80  RA      : 0x4ff05e32  SP      : 0x4ff392b0  GP      : 0x4ff11d00  
+TP      : 0x4ff393a0  T0      : 0x37363534  T1      : 0x7271706f  T2      : 0x33323130  
+S0/FP   : 0x00000004  S1      : 0x4ff39314  A0      : 0x4ff392dc  A1      : 0x4ff39312  
+A2      : 0x00000000  A3      : 0x4ff39309  A4      : 0x00000001  A5      : 0x4ff17000  
+A6      : 0x00000000  A7      : 0x76757473  S2      : 0x00000000  S3      : 0x00000000  
+S4      : 0x00000000  S5      : 0x00000000  S6      : 0x00000000  S7      : 0x00000000  
+S8      : 0x00000000  S9      : 0x00000000  S10     : 0x00000000  S11     : 0x00000000  
+T3      : 0x6e6d6c6b  T4      : 0x6a696867  T5      : 0x66656463  T6      : 0x62613938  
+MSTATUS : 0x00011880  MTVEC   : 0x4ff00003  MCAUSE  : 0x00000002  MTVAL   : 0x00000000  
+MHARTID : 0x00000000  
+
+add symbol table from file "C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf"
+C:\Users\vanshika\OneDrive\Desktop\HEIMDALLS WATCH\\gps subsystem\\esp32-gps-client\\build\\bootloader\\bootloader.elf: No such file or directory.
+panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+491	    asm("unimp");   // should be an invalid operation on RISC-V targets
+#0  panic_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/panic.c:491
+#1  0x4ff05e32 in esp_system_abort (details=details@entry=0x4ff392dc "abort() was called at PC 0x4ff05e29 on core 0") at C:/esp/v5.5.5/esp-idf/components/esp_system/port/esp_system_chip.c:87
+#2  0x4ff0e96c in abort () at C:/esp/v5.5.5/esp-idf/components/newlib/src/abort.c:38
+#3  0x4ff05e2c in _esp_error_check_failed (rc=<optimized out>, file=file@entry=0x400b1810 "", line=line@entry=159, function=function@entry=0x400d4b44 <__func__.0> "", expression=expression@entry=0x400b188c "") at C:/esp/v5.5.5/esp-idf/components/esp_system/esp_err.c:49
+#4  0x40024534 in app_main () at C:/Users/vanshika/OneDrive/Desktop/HEIMDALL'S WATCH/gps subsystem/esp32-gps-client/main/main.c:159
+#5  0x40090076 in main_task (args=<error reading variable: value has been optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/app_startup.c:215
+#6  0x4ff07086 in vPortTaskWrapper (pxCode=<optimized out>, pvParameters=<optimized out>) at C:/esp/v5.5.5/esp-idf/components/freertos/FreeRTOS-Kernel/portable/riscv/port.c:257
+
+
+
+ELF file SHA256: 6b3dce65d
+
+Rebooting...
+ESP-ROM:esp32p4-eco2-20240710
+Build:Jul 10 2024
+rst:0xc (SW_CPU_RESET),boot:0x20f (SPI_FAST_FLASH_BOOT)
+Core0 Saved PC:0x4ff0320a
+Core1 Saved PC:0x4ff03352
+SPI mode:DIO, clock div:1
+load:0x4ff33ce0,len:0x15e4
+load:0x4ff29ed0,len:0xe64
+load:0x4ff2cbd0,len:0x3534
+entry 0x4ff29eda
+[0;32mI (33) boot: ESP-IDF v5.5.5 2nd stage bootloader[0m
+[0;32mI (33) boot: compile time Oct  5 2026 19:55:42[0m
+[0;32mI (34) boot: Multicore bootloader[0m
+[0;32mI (35) boot: chip revision: v1.3[0m
+[0;32mI (36) boot: efuse block revision: v0.3[0m
+[0;32mI (40) boot.esp32p4: SPI Speed      : 80MHz[0m
+[0;32mI (44) boot.esp32p4: SPI Mode       : DIO[0m
+[0;32mI (47) boot.esp32p4: SPI Flash Size : 2MB[0m
+[0;32mI (51) boot: Enabling RNG early entropy source...[0m
+[0;32mI (56) boot: Partition Table:[0m
+[0;32mI (58) boot: ## Label            Usage          Type ST Offset   Length[0m
+[0;32mI (65) boot:  0 nvs              WiFi data        01 02 00009000 00006000[0m
+[0;32mI (71) boot:  1 phy_init         RF data          01 01 0000f000 00001000[0m
+[0;32mI (78) boot:  2 factory          factory app      00 00 00010000 001f0000[0m
+[0;32mI (85) boot: End of partition table[0m
+[0;32mI (88) esp_image: segment 0: paddr=00010020 vaddr=400a0020 size=4c8c4h (313540) map[0m
+[0;32mI (139) esp_image: segment 1: paddr=0005c8ec vaddr=30100000 size=00054h (    84) load[0m
+[0;32mI (140) esp_image: segment 2: paddr=0005c948 vaddr=4ff00000 size=036d0h ( 14032) load[0m
+[0;32mI (146) esp_image: segment 3: paddr=00060020 vaddr=40000020 size=91c0ch (597004) map[0m
+[0;32mI (234) esp_image: segment 4: paddr=000f1c34 vaddr=4ff036d0 size=0de2ch ( 56876) load[0m
+[0;32mI (245) esp_image: segment 5: paddr=000ffa68 vaddr=4ff11500 size=02cf4h ( 11508) load[0m
+[0;32mI (252) boot: Loaded app from partition at offset 0x10000[0m
+[0;32mI (252) boot: Disabling RNG early entropy source...[0m
+[0;32mI (264) cpu_start: Multicore app[0m
+[0;32mI (274) cpu_start: GPIO 38 and 37 are used as console UART I/O pins[0m
+[0;32mI (275) cpu_start: Pro cpu start user code[0m
+[0;32mI (275) cpu_start: cpu freq: 360000000 Hz[0m
+[0;32mI (277) app_init: Application information:[0m
+[0;32mI (281) app_init: Project name:     heimdall_gps_client[0m
+[0;32mI (285) app_init: App version:      1[0m
+[0;32mI (289) app_init: Compile time:     Oct  5 2026 19:55:38[0m
+[0;32mI (294) app_init: ELF file SHA256:  6b3dce65d...[0m
+[0;32mI (298) app_init: ESP-IDF:          v5.5.5[0m
+[0;32mI (302) efuse_init: Min chip rev:     v1.0[0m
+[0;32mI (306) efuse_init: Max chip rev:     v1.99 [0m
+[0;32mI (310) efuse_init: Chip rev:         v1.3[0m
+[0;32mI (314) heap_init: Initializing. RAM available for dynamic allocation:[0m
+[0;32mI (320) heap_init: At 4FF17320 len 00023CA0 (143 KiB): RETENT_RAM[0m
+[0;32mI (326) heap_init: At 4FF3AFC0 len 00004BF0 (18 KiB): RAM[0m
+[0;32mI (331) heap_init: At 4FF40000 len 00060000 (384 KiB): RAM[0m
+[0;32mI (336) heap_init: At 50108080 len 00007F80 (31 KiB): RTCRAM[0m
+[0;32mI (341) heap_init: At 30100054 len 00001FAC (7 KiB): SPM[0m
+[0;32mI (347) spi_flash: detected chip: gd[0m
+[0;32mI (350) spi_flash: flash io: dio[0m
+[0;33mW (353) spi_flash: Detected size(32768k) larger than the size in the binary image header(2048k). Using the size in the binary image header.[0m
+[0;32mI (365) host_init: ESP Hosted : Host chip_ip[18][0m
+[0;32mI (369) H_API: ESP-Hosted starting. Hosted_Tasks: prio:23, stack: 5120 RPC_task_stack: 5120[0m
+[0;32mI (378) H_API: ** add_esp_wifi_remote_channels **[0m
+[0;33mW (382) os_wrapper_esp: CONFIG_FREERTOS_HZ is 100, ESP-Hosted recommended 1000, to avoid bus level jitters[0m
+[0;32mI (393) sleep_gpio: Configure to isolate all GPIO pins in sleep state[0m
+[0;32mI (398) sleep_gpio: Enable automatic switching of GPIO sleep configuration[0m
+[0;32mI (404) H_SDIO_DRV: sdio_data_to_rx_buf_task started[0m
+[0;32mI (404) main_task: Started on CPU0[0m
+[0;32mI (414) main_task: Calling app_main()[0m
+[0;32mI (434) HEIMDALL_GPS: Connecting to Wi-Fi...[0m
+[0;32mI (434) example_connect: Start example_connect.[0m
+[0;32mI (434) transport: Attempt connection with slave: retry[0][0m
+[0;33mW (434) H_SDIO_DRV: Reset slave using GPIO[54][0m
+[0;32mI (434) os_wrapper_esp: GPIO [54] configured[0m
+[0;32mI (1964) sdio_wrapper: SDIO master: Slot 1, Data-Lines: 4-bit Freq(KHz)[40000 KHz][0m
+[0;32mI (1964) sdio_wrapper: GPIOs: CLK[18] CMD[19] D0[14] D1[15] D2[16] D3[17] Slave_Reset[54][0m
+[0;32mI (1964) sdio_wrapper: Queues: Tx[20] Rx[20] SDIO-Rx-Mode[1][0m
+[0;32mI (2004) sdio_wrapper: Function 0 Blocksize: 512[0m
+[0;32mI (2004) sdio_wrapper: Function 1 Blocksize: 512[0m
+[0;32mI (2104) H_SDIO_DRV: Card init success, TRANSPORT_RX_ACTIVE[0m
+[0;32mI (2104) transport: set_transport_state: 1[0m
+[0;32mI (2104) transport: Waiting for esp_hosted slave to be ready[0m
+[0;32mI (2204) H_SDIO_DRV: SDIO Host operating in STREAMING MODE[0m
+[0;32mI (2204) H_SDIO_DRV: Open data path at slave[0m
+[0;32mI (2204) H_SDIO_DRV: Starting SDIO process rx task[0m
+[0;32mI (2204) H_SDIO_DRV: Received ESP_PRIV_IF type message[0m
+[0;32mI (2204) transport: Received INIT event from ESP32 peripheral[0m
+[0;32mI (2214) transport: EVENT: 12[0m
+[0;32mI (2214) transport: Identified slave [esp32c6][0m
+[0;32mI (2214) transport: EVENT: 11[0m
+[0;32mI (2224) transport: capabilities: 0xd[0m
+[0;32mI (2224) transport: Features supported are:[0m
+[0;32mI (2224) transport: 	 * WLAN[0m
+[0;32mI (2234) transport: 	   - HCI over SDIO[0m
+[0;32mI (2234) transport: 	   - BLE only[0m
+[0;32mI (2234) transport: EVENT: 13[0m
+[0;33mW (2244) transport: Version mismatch: Host [2.12.0] > Co-proc [0.0.0] ==> Upgrade co-proc to avoid RPC timeouts[0m
+[0;32mI (2254) transport: ESP board type is : 13 [0m
+
+[0;32mI (2254) transport: Base transport is set-up, TRANSPORT_TX_ACTIVE[0m
+[0;32mI (2264) H_API: Transport active[0m
+[0;32mI (2264) transport: Slave chip Id[12][0m
+[0;32mI (2264) transport: raw_tp_dir[-], flow_ctrl: low[60] high[80][0m
+[0;32mI (2274) transport: transport_delayed_init[0m
+[0;32mI (2274) esp_cli: Registering command: crash[0m
+[0;32mI (2284) esp_cli: Registering command: reboot[0m
+[0;32mI (2284) esp_cli: Registering command: mem-dump[0m
+[0;32mI (2284) esp_cli: Registering command: task-dump[0m
+[0;32mI (2294) esp_cli: Registering command: cpu-dump[0m
+[0;32mI (2294) esp_cli: Registering command: heap-trace[0m
+[0;32mI (2304) esp_cli: Registering command: sock-dump[0m
+[0;32mI (2304) esp_cli: Registering command: host-power-save[0m
+[0;32mI (2314) hci_stub_drv: Host BT Support: Disabled[0m
+[0;32mI (2314) H_SDIO_DRV: Received INIT event[0m
+[0;32mI (2314) H_SDIO_DRV: Event type: 0x22[0m
+[0;32mI (2324) H_SDIO_DRV: Write thread started[0m
+[0;32mI (2404) RPC_WRAP: Coprocessor Boot-up[0m
+[0;32mI (2614) example_connect: Connecting to Vanshika...[0m
+[0;32mI (2644) H_API: esp_wifi_remote_connect[0m
+[0;32mI (2644) RPC_WRAP: ESP Event: wifi station started[0m
+[0;32mI (2664) example_connect: Waiting for IP(s)[0m
+[0;32mI (5064) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (5064) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (5074) H_API: esp_wifi_remote_connect[0m
+[0;32mI (7484) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (7484) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (7484) H_API: esp_wifi_remote_connect[0m
+[0;32mI (9904) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (9904) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (9904) H_API: esp_wifi_remote_connect[0m
+[0;32mI (12314) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (12314) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (12314) H_API: esp_wifi_remote_connect[0m
+[0;32mI (14734) RPC_WRAP: ESP Event: Station mode: Disconnected[0m
+[0;32mI (14734) example_connect: Wi-Fi disconnected 201, trying to reconnect...[0m
+[0;32mI (14734) H_API: esp_wifi_remote_connect[0m

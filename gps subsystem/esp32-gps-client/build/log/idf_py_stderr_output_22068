@@ -1,0 +1,10 @@
+Command: C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe C:\esp\v5.5.5\esp-idf\tools/idf_monitor.py -p COM13 -b 115200 --toolchain-prefix riscv32-esp-elf- --target esp32p4 --revision 100 --decode-panic backtrace C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\heimdall_gps_client.elf C:\Users\vanshika\OneDrive\Desktop\HEIMDALL'S WATCH\gps subsystem\esp32-gps-client\build\bootloader\bootloader.elf --force-color -m 'C:\Espressif\tools\python\v5.5.5\venv\Scripts\python.exe' 'C:\esp\v5.5.5\esp-idf\tools\idf.py' '-p' 'COM13'
+--- WARNING: GDB cannot open serial ports accessed as COMx
+--- NOTE: Using \\.\COM13 instead...
+--- esp-idf-monitor 1.10.0 on \\.\COM13 115200
+--- Quit: Ctrl+] | Menu: Ctrl+T | Help: Ctrl+T followed by Ctrl+H
+--- 0x4ff29ed0: esp_bootloader_get_description at C:/esp/v5.5.5/esp-idf/components/esp_bootloader_format/esp_bootloader_desc.c:39
+--- 0x4ff2cbd0: esp_flash_encryption_enabled at C:/esp/v5.5.5/esp-idf/components/bootloader_support/src/flash_encrypt.c:89
+--- 0x4ff29eda: call_start_cpu0 at C:/esp/v5.5.5/esp-idf/components/bootloader/subproject/main/bootloader_start.c:27
+--- 0x4005792a: wifi_sta_receive at C:/esp/v5.5.5/esp-idf/components/esp_wifi/src/wifi_netif.c:38
+
